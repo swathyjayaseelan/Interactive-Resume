@@ -43,13 +43,13 @@ var work = {
         "title": "Systems Engineer",
         "location": "India",
         "dates": "2012-2013",
-        "description": " <strong>Responsibilities</strong>: Deploy applications on WebLogic servers •	Integrate applications with WebSSO (Single sign-on)•	Support the system by analyzing and rectifying problems that arise later"
+        "description": " Responsibilities: Deploy applications on WebLogic servers •	Integrate applications with WebSSO (Single sign-on)•	Support the system by analyzing and rectifying problems that arise later"
     }, {
         "employer": "Adam Associates",
         "title": "Import/Export Coordinator",
         "location": "India",
         "dates": "2013-2015",
-        "description": "<strong>Responsibilities</strong>: Build and maintain relationships with vendors for feedback and improvement opportunities •	Communicate with foreign agents for shipment coordination •	Manage and Monitor on time performance •	Assist the traders as needed."
+        "description": "Responsibilities: Build and maintain relationships with vendors for feedback and improvement opportunities •	Communicate with foreign agents for shipment coordination •	Manage and Monitor on time performance •	Assist the traders as needed."
     }]
 };
 
@@ -85,6 +85,9 @@ bio.display = function() {
     }
 
     for (var key in bio.contacts) {
+      if(!bio.contacts(key)){
+        continue;
+      }
         formattedContact = HTMLcontactGeneric.replace("%contact%", key);
         var finalContact = formattedContact.replace("%data%", bio.contacts[key]);
         $("#topContacts").append(finalContact);
@@ -106,16 +109,16 @@ bio.display = function() {
     var formattedFooter = HTMLfooter.replace("%data%", bio.links.github);
     formattedFooter = formattedFooter.replace("%type%", "github");
     $("#footerContacts").append(formattedFooter);
-    var formattedFooter = HTMLfooter.replace("%data%", bio.links.linkedin);
+    formattedFooter = HTMLfooter.replace("%data%", bio.links.linkedin);
     formattedFooter = formattedFooter.replace("%type%", "linkedin-square");
     $("#footerContacts").append(formattedFooter);
-    var formattedFooter = HTMLfooter.replace("%data%", bio.links.mail);
+    formattedFooter = HTMLfooter.replace("%data%", bio.links.mail);
     formattedFooter = formattedFooter.replace("%type%", "envelope");
     $("#footerContacts").append(formattedFooter);
-    var formattedFooter = HTMLfooter.replace("%data%", bio.links.skype);
+    formattedFooter = HTMLfooter.replace("%data%", bio.links.skype);
     formattedFooter = formattedFooter.replace("%type%", "skype");
     $("#footerContacts").append(formattedFooter);
-}
+};
 work.display = function() {
     work.jobs.forEach(function(job) {
         $("#workExperience").append(HTMLworkStart);
@@ -127,7 +130,7 @@ work.display = function() {
         $(".work-entry:last").append(formattedDates);
         var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
         $(".work-entry:last").append(formattedDescription);
-    })
+    });
     /*  for (job in work.jobs) {
           $("#workExperience").append(HTMLworkStart);
           var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -149,8 +152,8 @@ function inName() {
     temp[1] = temp[1].toUpperCase();
     temp[0] = temp[0].slice(0, 1).toUpperCase() + temp[0].slice(1).toLowerCase();
     temp = temp.join(" ");
-    return temp
-};
+    return temp;
+}
 
 projects.display = function() {
     $("#projects").append(HTMLprojectStart);
@@ -167,7 +170,7 @@ projects.display = function() {
         }
         var formattedprojectLink = HTMLprojectLink.replace("%data%", project.links);
         $(".project-entry:last").append(formattedprojectLink);
-    })
+    });
 
     /*for (var text in projects.projects) {
         var formattedprojectTitle = HTMLprojectTitle.replace("%data%", projects.projects[text].title);
@@ -204,7 +207,7 @@ education.display = function() {
             $(".education-entry:last").append(formattedschoolMajor);
         }
 
-    })
+    });
     /*for (var school in education.schools) {
         var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
         formattedschoolName = formattedschoolName.replace("#", education.schools[school].url);
@@ -234,7 +237,7 @@ education.display = function() {
         var formattedonlineTitle = HTMLonlineTitle.replace("%data%", online.title);
         $(".online").append(formattedonlineTitle);
 
-    })
+    });
     /*for (var online in education.onlineCourses) {
 
         var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[online].school);
