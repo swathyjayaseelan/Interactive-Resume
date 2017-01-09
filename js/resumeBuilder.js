@@ -85,12 +85,11 @@ bio.display = function() {
     }
 
     for (var key in bio.contacts) {
-      if(!bio.contacts(key)){
-        continue;
-      }
+      if(bio.contacts.hasOwnProperty(key)){
         formattedContact = HTMLcontactGeneric.replace("%contact%", key);
         var finalContact = formattedContact.replace("%data%", bio.contacts[key]);
         $("#topContacts").append(finalContact);
+      }
     }
 
     var formattedbioPic = HTMLbioPic.replace("%data%", bio.biopic);
