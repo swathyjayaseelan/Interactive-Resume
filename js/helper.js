@@ -43,7 +43,7 @@ var HTMLonlineTitle = '--%data%</a>'
 var HTMLonlineSchool = '<a href="#">%data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 
-
+var HTMLfooter = '<a href="%data%"><i class="fa fa-%type% fa-2x" aria-hidden="true"></i></a>';
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
@@ -82,7 +82,7 @@ function initializeMap() {
 
 function locationFinder() {
     var locations = [];
-    locations.push(bio.contact.location);
+    locations.push(bio.contacts.location);
     education.schools.forEach(function(school){
       locations.push(school.location);
     });

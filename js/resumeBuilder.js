@@ -10,8 +10,13 @@ var bio = {
         "github": "Swathy Jayaseelan",
         "location": "3700 South Plaza Drive, Santa Ana, California"
     },
+    "links": {
+        "github": "https://github.com/swathyjayaseelan",
+        "linkedin": "#",
+        "mail": "mailto:swathyjayaseelan@gmail.com",
+        "skype": "skype:Swathy_Jayaseelan?add"
+    },
     "skills": ["HTML", "CSS", "JavaScript", "Java"]
-
 };
 
 var projects = {
@@ -96,18 +101,31 @@ bio.display = function() {
     $("#header").append(formattedMessage);
     var formattedResume = HTMLresumeDownload.replace("#", bio.resume);
     $("#header").prepend(formattedResume);
+
+    var formattedFooter = HTMLfooter.replace("%data%",bio.links.github);
+    formattedFooter = formattedFooter.replace("%type%","github");
+    $("#footerContacts").append(formattedFooter);
+    var formattedFooter = HTMLfooter.replace("%data%",bio.links.linkedin);
+    formattedFooter = formattedFooter.replace("%type%","linkedin-square");
+    $("#footerContacts").append(formattedFooter);
+    var formattedFooter = HTMLfooter.replace("%data%",bio.links.mail);
+    formattedFooter = formattedFooter.replace("%type%","envelope");
+    $("#footerContacts").append(formattedFooter);
+    var formattedFooter = HTMLfooter.replace("%data%",bio.links.skype);
+    formattedFooter = formattedFooter.replace("%type%","skype");
+    $("#footerContacts").append(formattedFooter);
 }
 work.display = function() {
     work.jobs.forEach(function(job){
-    $("#workExperience").append(HTMLworkStart);
-    var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-    var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
-    var formattedEmployerTitle = formattedEmployer + formattedTitle;
-    $(".work-entry:last").append(formattedEmployerTitle);
-    var formattedDates = HTMLworkDates.replace("%data%", job.dates);
-    $(".work-entry:last").append(formattedDates);
-    var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
-    $(".work-entry:last").append(formattedDescription);
+      $("#workExperience").append(HTMLworkStart);
+      var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+      var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
+      var formattedEmployerTitle = formattedEmployer + formattedTitle;
+      $(".work-entry:last").append(formattedEmployerTitle);
+      var formattedDates = HTMLworkDates.replace("%data%", job.dates);
+      $(".work-entry:last").append(formattedDates);
+      var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
+      $(".work-entry:last").append(formattedDescription);
     })
   /*  for (job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
