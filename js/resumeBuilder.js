@@ -127,6 +127,8 @@ work.display = function() {
         $(".work-entry:last").append(formattedEmployerTitle);
         var formattedDates = HTMLworkDates.replace("%data%", job.dates);
         $(".work-entry:last").append(formattedDates);
+        var formaattedLocation = HTMLworkLocation.replace("%data%", job.location);
+        $(".work-entry:last").append(formaattedLocation);
         var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
         $(".work-entry:last").append(formattedDescription);
     });
