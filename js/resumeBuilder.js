@@ -1,10 +1,10 @@
 
 var bio = {
     "name": "Swathy Jayaseelan",
-    "role": "Web Developer",
+    "role": "Full-Stack Web Developer",
     "welcomeMessage": "Hello ! Welcome to my page !",
-    "biopic": "images/fry.jpg",
-    "resume": "docs/resume.docx",
+    "biopic": "images/swathy.jpg",
+    "resume": "docs/resume.pdf",
     "contacts": {
         "mobile": "+19495725679",
         "email": "swathyjayaseelan@gmail.com",
@@ -13,11 +13,11 @@ var bio = {
     },
     "links": {
         "github": "https://github.com/swathyjayaseelan",
-        "linkedin": "#",
+        "linkedin": "www.linkedin.com/in/swathy-jayaseelan",
         "mail": "mailto:swathyjayaseelan@gmail.com",
         "skype": "skype:Swathy_Jayaseelan?add"
     },
-    "skills": ["HTML", "CSS", "JavaScript", "Java"]
+    "skills": ["HTML", "CSS", "JavaScript", "Python", "Java"]
 };
 
 var projects = {
@@ -29,11 +29,11 @@ var projects = {
         "images": ["images/portfolio.png"]
 
     }, {
-        "title": "SRS for COS",
-        "dates": "May 2016",
-        "links": "docs/SRS.docx",
-        "description": "Drafted the Software Requirements Specification document for an Online Cafeteria Ordering System",
-        "images": ["images/srs.png"]
+        "title": "Classic Arcade Game",
+        "dates": "July 2016",
+        "links": "https://swathyjayaseelan.github.io/Classic-Arcade-Game/",
+        "description": " It is a fun to play gaming application built using object-oriented JavaScript",
+        "images": ["images/game.png"]
     }]
 };
 
@@ -46,7 +46,7 @@ var work = {
         "description": " Responsibilities: Deploy applications on WebLogic servers •	Integrate applications with WebSSO (Single sign-on)•	Support the system by analyzing and rectifying problems that arise later"
     }, {
         "employer": "Adam Associates",
-        "title": "Import/Export Coordinator",
+        "title": "Project Manager",
         "location": "India",
         "dates": "2013-2015",
         "description": "Responsibilities: Build and maintain relationships with vendors for feedback and improvement opportunities •	Communicate with foreign agents for shipment coordination •	Manage and Monitor on time performance •	Assist the traders as needed."
@@ -73,6 +73,12 @@ var education = {
         "title": "Front-end Web Developer Nanodegree",
         "school": "Udacity",
         "dates": "December 2016",
+        "url": "https://www.udacity.com/"
+    },
+     {
+        "title": "Full-Stack Web Developer Nanodegree",
+        "school": "Udacity",
+        "dates": "August 2017",
         "url": "https://www.udacity.com/"
     }],
 };
