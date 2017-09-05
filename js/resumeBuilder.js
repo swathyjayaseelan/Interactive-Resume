@@ -49,7 +49,7 @@ var work = {
         "title": "Project Manager",
         "location": "India",
         "dates": "2013-2015",
-        "description": "Responsibilities: Build and maintain relationships with vendors for feedback and improvement opportunities •	Communicate with foreign agents for shipment coordination •	Manage and Monitor on time performance •	Assist the traders as needed."
+        "description": "Responsibilities: Planned and organized project schedules and did assessment of project requirements • Evaluated and negotiated budgets and timelines of projects with clients and managers"
     }]
 };
 
