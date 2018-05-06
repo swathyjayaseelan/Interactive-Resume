@@ -9,11 +9,11 @@ var bio = {
         "mobile": "+19495725679",
         "email": "swathyjayaseelan@gmail.com",
         "github": "Swathy Jayaseelan",
-        "location": "3700 South Plaza Drive, Santa Ana, California"
+        "location": "310 Oak Glen, Irvine, California"
     },
     "links": {
         "github": "https://github.com/swathyjayaseelan",
-        "linkedin": "www.linkedin.com/in/swathy-jayaseelan",
+        "linkedin": "https://www.linkedin.com/in/swathy-jayaseelan",
         "mail": "mailto:swathyjayaseelan@gmail.com",
         "skype": "skype:Swathy_Jayaseelan?add"
     },
@@ -179,21 +179,7 @@ projects.display = function() {
         $(".project-entry:last").append(formattedprojectLink);
     });
 
-    /*for (var text in projects.projects) {
-        var formattedprojectTitle = HTMLprojectTitle.replace("%data%", projects.projects[text].title);
-        $(".project-entry:last").append(formattedprojectTitle);
-        var formattedprojectDates = HTMLprojectDates.replace("%data%", projects.projects[text].dates);
-        $(".project-entry:last").append(formattedprojectDates);
-        var formattedprojectDescription = HTMLprojectDescription.replace("%data%", projects.projects[text].description);
-        $(".project-entry:last").append(formattedprojectDescription);
-        for (var i = 0; i < projects.projects[text].images.length; i++) {
-            var formattedprojectImages = HTMLprojectImage.replace("%data%", projects.projects[text].images[i]);
-            $(".project-entry:last").append(formattedprojectImages);
-        }
-        var formattedprojectLink = HTMLprojectLink.replace("%data%", projects.projects[text].links);
-        $(".project-entry:last").append(formattedprojectLink);
-    }
-    */
+    
 };
 
 
@@ -215,22 +201,7 @@ education.display = function() {
         }
 
     });
-    /*for (var school in education.schools) {
-        var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
-        formattedschoolName = formattedschoolName.replace("#", education.schools[school].url);
-        $(".education-entry:last").append(formattedschoolName);
-        var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degrees);
-        $(".education-entry:last").append(formattedschoolDegree);
-        var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-        $(".education-entry:last").append(formattedschoolDates);
-        var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-        $(".education-entry:last").append(formattedschoolLocation);
-        for (var i = 0; i < education.schools[school].majors.length; i++) {
-            var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[i]);
-            $(".education-entry:last").append(formattedschoolMajor);
-        }
-    }
-    */
+
 
     $("#education").append(HTMLonlineClasses);
     $("#education").append(HTMLonlineclassesStart);
@@ -245,17 +216,7 @@ education.display = function() {
         $(".online").append(formattedonlineTitle);
 
     });
-    /*for (var online in education.onlineCourses) {
 
-        var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[online].school);
-        formattedonlineSchool = formattedonlineSchool.replace("#", education.onlineCourses[online].url);
-        $(".online").append(formattedonlineSchool);
-        var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[online].dates);
-        $(".online").append(formattedonlineDates);
-        var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[online].title);
-        $(".online").append(formattedonlineTitle);
-    }
-    */
 };
 $(document).ready(function() {
     $("#topContacts").hover(function() {
